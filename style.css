@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-size: 9px;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  padding-left: 13px;
+}
+.menu a {
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+  box-shadow: 0px 1px 10px #dfdcdc;
+}
+
+.container-fluid {
+  background-color: deepskyblue;
+}
+.cp-nm {
+  text-align: center;
+  width: 50%;
+  color: whitesmoke;
+}
+
+.image-bs {
+  padding: 0px;
+  width: 50%;
+}
+.font-icons {
+  color: whitesmoke;
+}
+.font-icons-menu {
+  color: deepskyblue;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+/* .navbar-brand {
+  padding: 0%;
+} */
+/* Main */
+.main {
+  float: left;
+  width: 80%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.content1 {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.div1 {
+  width: 100%;
+  margin: 1%;
+}
+.button {
+  display: inline-block;
+  padding: 5%;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px #dfdcdc;
+  background-color: white;
+  width: 90%;
+  height: auto;
+}
+
+.button:hover {
+  border: 1px solid deepskyblue;
+}
+
+.button:active {
+  /* background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px); */
+  border: 1px solid deepskyblue;
+}
+.content2 {
+  margin: 2% 0%;
+  align-self: flex-end;
+}
+.btn {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid beige;
+  font-size: 9px;
+}
+.content3 {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0px;
+}
+.p10 {
+  padding: 10px;
+}
+.br-rd {
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+}
+.chart1 {
+  width: 60%;
+}
+.chart2 {
+  width: 40%;
+}

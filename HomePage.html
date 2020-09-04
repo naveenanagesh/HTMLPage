@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous"
+      />
+      <link
+        type="text/css"
+        rel="stylesheet"
+        href="C:\Users\hp\Desktop\DeskFactors\style.css"
+      />
+      <script
+        type="text/javascript"
+        src="https://www.gstatic.com/charts/loader.js"
+      ></script>
+      <script>
+        google.charts.load("current", { packages: ["corechart", "bar"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Users", "Active", "Deleted"],
+            ["Customers", 58, 50],
+            ["Suppliers", 69, 30],
+            ["Partners", 80, 20],
+            ["Consultants", 74, 50],
+            ["Others", 64, 04]
+          ]);
+
+          var options = {
+            pieHole: 0.7,
+            title: "All Users(Customers, Partners, Suppliers..)",
+            pieSliceText: "none",
+            colors: [
+              "deepskyblue",
+              "black",
+              "rgb(185, 178, 178)",
+              "lightblue",
+              "rgb(248, 232, 232)"
+            ],
+            pieSliceTextStyle: {
+              color: "black"
+            }
+          };
+          var chart = new google.visualization.PieChart(
+            document.getElementById("pie-chart")
+          );
+          chart.draw(data, options);
+          //pie chart
+          var data2 = google.visualization.arrayToDataTable([
+            ["User", "Active and Deleted"],
+            ["Deleted", 30],
+            ["Active", 70]
+          ]);
+
+          var options2 = {
+            pieHole: 0.7,
+            title: "Status of users",
+            pieSliceText: "none",
+            colors: ["rgb(248, 232, 232)", "deepskyblue"],
+            pieSliceTextStyle: {
+              color: "black"
+            }
+          };
+          var chart2 = new google.visualization.PieChart(
+            document.getElementById("pie-chart2")
+          );
+          chart2.draw(data2, options2);
+          //   Bar chart
+          var data1 = google.visualization.arrayToDataTable([
+            [" ", "Active", "Deleted"],
+            ["Jan", 58, 10],
+            ["Feb", 69, 30],
+            ["Mar", 80, 40],
+            ["Apr", 74, 50],
+            ["May", 64, 30],
+            ["Jun", 34, 20],
+            ["Jul", 84, 10],
+            ["Aug", 94, 50],
+            ["Sep", 34, 30],
+            ["Oct", 74, 20]
+          ]);
+          var options1 = {
+            bars: "vertical",
+            // bar: { groupWidth: "50%" },
+            legend: {
+              position: "bottom",
+              alignment: "start",
+              textStyle: { color: "blue", fontSize: 16 }
+            },
+            colors: ["deepskyblue", "rgb(185, 178, 178)"],
+            isStacked: true,
+            axes: {
+              x: {
+                distance: { label: "parsecs" },
+                brightness: { side: "top", label: "apparent magnitude" }
+              }
+            }
+          };
+
+          var chart1 = new google.charts.Bar(
+            document.getElementById("bar_chart")
+          );
+          chart1.draw(data1, options1);
+        }
+      </script>
+
+      <!-- Chart Display -->
+    </head>
+    <body>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <!-- <i class="fas fa-circle fa-2x font-icons"></i> &nbsp;
+              <span style="color: whitesmoke;">Blue Secures</span> -->
+              <img
+                class="image-bs"
+                src="C:\Users\hp\Desktop\DeskFactors\Images\Group-32628.svg"
+              />
+            </a>
+          </div>
+          <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto cp-nm" href="#">Company Name</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"><i class="fab fa-whatsapp fa-2x font-icons"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-user-circle fa-2x font-icons"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="menu">
+        <a href="#"
+          ><i class="fad fa-folder-open fa-2x font-icons-menu"></i>&nbsp; View,
+          Download, Print Reports & Delete Daata</a
+        >
+        <a href="#"
+          ><i class="fad fa-file-alt fa-2x font-icons-menu"></i>&nbsp; Employees
+          & Contractors</a
+        >
+        <a href="#"
+          ><i class="fad fa-signal-alt-3 fa-2x font-icons-menu"></i>&nbsp;
+          Customers, suppliers, partners, consultants etc</a
+        >
+        <a href="#"
+          ><i class="far fa-users fa-2x font-icons-menu"></i>&nbsp; Groups</a
+        >
+        <a
+          ><i class="fal fa-user-times fa-2x font-icons-menu"></i>&nbsp;
+          Inactive users</a
+        >
+      </div>
+
+      <div class="main">
+        <div class="content1">
+          <div class="div1">
+            <button class="button">
+              <i class="far fa-users fa-2x font-icons-menu"></i>&nbsp; Users &
+              Groups
+            </button>
+          </div>
+          <div class="div1">
+            <button class="button">
+              <i class="fas fa-file-invoice-dollar fa-2x font-icons-menu"></i
+              >&nbsp; Subscription Billing & Invoices
+            </button>
+          </div>
+          <div class="div1">
+            <button class="button">
+              <i class="fad fa-file-download fa-2x font-icons-menu"></i>&nbsp;
+              Download & Delete Data
+            </button>
+          </div>
+        </div>
+        <div class="content2">
+          <button class="btn">
+            <i class="fal fa-print fa-2x"></i>&nbsp; Print
+          </button>
+          <button class="btn">
+            <i class="fal fa-download fa-2x "></i>&nbsp; Download
+          </button>
+          <button class="btn">
+            <i class="fal fa-filter fa-2x"></i>&nbsp; Filter
+          </button>
+        </div>
+
+        <div class="content3">
+          <div class="chart1 br-rd ">
+            <div
+              class="br-rd p10"
+              id="pie-chart"
+              style="width: 100%; height: 100%;"
+            ></div>
+          </div>
+          <div class="chart2 br-rd">
+            <div
+              class="br-rd p10"
+              id="pie-chart2"
+              style="width: 100%; height: 100%;"
+            ></div>
+          </div>
+        </div>
+        <div class="content4">
+          <div
+            class="br-rd p10"
+            id="bar_chart"
+            style="width: 100%; height: 100%;"
+          ></div>
+        </div>
+      </div>
+    </body>
+  </html>
+</html>
